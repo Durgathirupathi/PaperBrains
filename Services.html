@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="assets/servicers.css">
+ <link rel="stylesheet" href="assets/style.css">
+ <link rel="stylesheet" href="assets/About_Us.css">
+</head>
+
+<body>
+    <div class="home-page-main-section">
+    <section class="header-section">
+        <header>
+            <div class="header-sect-1 pt-3">
+                <div class="header-section-1 d-flex m-auto align-items-center">
+                    <div class="logo-section">
+                        <a href="index.html">
+                        <img src="assets/logo.png"
+                            alt="paperBrains-logo">
+                        </a>
+                    </div>
+                    <div class="content-section flex-grow-1 text-center">
+                        <a href="index.html">
+                        <img src="assets/paperbrains.png" alt="">
+                        </a>
+                    </div>
+                    <div class="hamburger-section" onclick="hamburgerEvent()">
+                        <button class="cursor-pointer bg-transparent border-0">
+                            <img src="assets/Group 593.png" alt="Hamburger-logo" >
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-sect-2 pt-3 pb-3">
+                <div class="header-section-2 d-flex m-auto align-items-center">
+                    <div class="content-section-2">
+                        <span class="date" id="live-date"></span>
+                    </div>
+                    <div class="flex-grow-1 text-center menu-items-section">
+                        <ul class="d-flex justify-content-center w-100 gap-5 menu-list-sub-folder mb-0">
+                            <li class="menu-list d-inline-block"><a href="index.html">Home</a></li>
+                            <li class="menu-list d-inline-block"><a href="aboutUs.html " >About Us</a></li>
+                            <li class="menu-list d-inline-block"><a href="Services.html" class="active">Services</a></li>
+                            <li class="menu-list d-inline-block"><a href="contacts.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="d-flex gap-4 mb-0">
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/Layer 2.png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/Group (2).png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/Layer 2 (1).png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/instagram (1) 2.png" alt="logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="side-bar">
+                <p class="side-bar-lg-para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae exercitationem fugit quia placeat 
+                    omnis sequi itaque, nostrum rem ipsum. 
+                    Consectetur, blanditiis. Commodi inventore distinctio tenetur omnis cum quae minima consectetur!
+                </p>
+
+
+                <!-- <div class="header-mobile m-auto align-items-center">
+                    <div class="content-section-2">
+                        <span>November 24,2023</span>
+                    </div>
+                    <div class="flex-grow-1 text-center menu-items-section">
+                        <ul class="d-flex justify-content-center w-100 gap-5 menu-list-sub-folder mb-0">
+                            <li class="menu-list d-inline-block"><a href="index.html" class="active">Home</a></li>
+                            <li class="menu-list d-inline-block"><a href="./aboutUs.html">About Us</a></li>
+                            <li class="menu-list d-inline-block"><a href="./Services.html">Services</a></li>
+                            <li class="menu-list d-inline-block"><a href="./contacts.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-social-icons">
+                        <ul class="d-flex gap-4 mb-0">
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="../assets/Layer 2.png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="../assets/Group (2).png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="../assets/Layer 2 (1).png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="../assets/instagram (1) 2.png" alt="logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <div class="header-mobile m-auto align-items-center">
+                    <!-- Date Section with Calendar Icon -->
+                    <div class="content-section-2 d-flex align-items-center">
+                        <i class="fa-solid fa-calendar-days me-2"></i>
+                        <span class="date" id="live-date1"></span>
+                    </div>
+                
+                    <!-- Navigation Menu with Icons -->
+                    <div class="flex-grow-1 text-center menu-items-section">
+                        <ul class="d-flex justify-content-center w-100 gap-1 menu-list-sub-folder mb-0">
+                            <li class="menu-list d-inline-block">
+                                <a href="index.html" >
+                                    <i class="fa-solid fa-house me-1"></i> Home
+                                </a>
+                            </li>
+                            <li class="menu-list d-inline-block">
+                                <a href="aboutUs.html" >
+                                    <i class="fa-solid fa-user me-1"></i> About Us
+                                </a>
+                            </li>
+                            <li class="menu-list d-inline-block">
+                                <a href="Services.html" class="active">
+                                    <i class="fa-solid fa-gears me-1"></i> Services
+                                </a>
+                            </li>
+                            <li class="menu-list d-inline-block">
+                                <a href="contacts.html">
+                                    <i class="fa-solid fa-envelope me-1"></i> Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <!-- Social Media Icons -->
+                    <div class="header-social-icons">
+                        <ul class="d-flex gap-4 mb-0">
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/Layer 2.png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/Group (2).png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/Layer 2 (1).png" alt="logo"></a>
+                            </li>
+                            <li class="social-icons d-inline-block">
+                                <a href="#"><img src="assets/instagram (1) 2.png" alt="logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+
+                <button class="cursor-pointer bg-transparent border-0 cross-icon" onclick="hamburgerEvent()">
+                    <i class="fa-solid fa-sack-xmark"></i>
+                </button>
+            </div>
+        </header>
+    </section>
+    <div class="Our-services-Banner"></div>
+    <div class="container py-5 mt-4">
+        <div class="row g-4 align-items-stretch">
+            <!-- Left Text Section -->
+            <div class="col-md-6">
+                <h2 class="text-primary fw-bold">Our Services</h2>
+                <p class="text-secondary">
+                        There are many variations of passages of Lorem Ipsum that is available, altered randomly, even
+                        slightly believable.
+                </p>
+            </div>
+
+            <!-- First Card -->
+            <div class="col-md-6">
+                <div class="service-card" >
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle me-3">
+                            <img src="assets/targeted.png" alt="Icon" class="icon-img">
+                          </div>
+                        <div>
+                            <h5 class="text-primary fw-bold services-content">Performance Marketing</h5>
+                        </div>
+                    </div>
+                    <p class="service-content">
+                        Strategy is everything. Website design, branding, and social media marketing are all of nothing without the power of a powerful digital marketing strategy. We’ll design a plan tailored to your company that will keep your company’s name and brand in your customers’ minds.</p>
+                </div>
+            </div>
+
+            <!-- Other Cards -->
+            <div class="col-md-6">
+                <div class="service-card">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle me-3">
+                            <img src="assets/social-media.png" alt="Icon" class="icon-img">
+                          </div>
+                          
+                        <div>
+                            <h5 class="text-primary fw-bold services-content">Social Media Marketing</h5>
+                        </div>
+                    </div>
+                    <p class="service-content">
+                        Never underestimate the power of social media. It’s estimated that the average user spends 50.1% of their time on their device, and 2 hours and 24 minutes on social media. Our powerful campaigns will get your brand front and center on major networks like Facebook, Twitter, Instagram, Pinterest, and LinkedIn.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service-card">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle me-3">
+                            <img src="assets/content-writing.png" alt="Icon" class="icon-img">
+                          </div>
+                        <div>
+                            <h5 class="text-primary fw-bold services-content">Content Marketing</h5>
+                        </div>
+                    </div>
+                    <p class="service-content">
+                        Who are you? What do you do?
+                        If your potential clients don’t know the moment they see your company, you’re likely to be left in the dust. Our expert design team will craft your Startup identity from the ground up, from colors and logos to images and personality.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service-card">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle me-3">
+                            <img src="assets/developer.png" alt="Icon" class="icon-img">
+                          </div>
+                        <div>
+                            <h5 class="text-primary fw-bold services-content">Website Development</h5>
+                        </div>
+                    </div>
+                    <p class="service-content">
+                        Everyone and their dog has a self-made WordPress or a stock website with placeholder text. We offer a beautiful, high-end website that hooks your audience, multiplying your engagement and impressions TEN-FOLD.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="service-card">
+                    <div class="d-flex align-items-center">
+                        <div class="icon-circle me-3">
+                            <img src="assets/branding1.png" alt="Icon" class="icon-img">
+                          </div>
+                        <div>
+                            <h5 class="text-primary fw-bold services-content">Branding</h5>
+                        </div>
+                    </div>
+                    <p class="service-content">
+                        Who are you? What do you do?
+If your potential clients don’t know the moment they see your company, you’re likely to be left in the dust. Our expert design team will craft your Startup identity from the ground up, from colors and logos to images and personality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container whyChooseUs-section-container">
+        <div class="row align-items-center flex-column-reverse flex-md-column-reverse flex-lg-row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <h2 style="color: #452A78;">Why Choose Us</h2>
+                <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember beautiful moonlight mistaken opinions it pleasure of debating. Court front maids forty if aware their.</p>
+            </div>
+            <div class="col-lg-6 col-md-12 text-center">
+                <img src="assets/why choose us.png" alt="Why Choose Us Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container text-center my-5"  >
+        <h2 class="fw-bold text-primary">Pricing</h2>
+        <p class="mt-3">
+            Especially favourable compliment but thoroughly unreserved saw she themselves.
+        </p>
+
+        <div class="row g-4 mt-4">
+            <!-- Pricing Cards -->
+          <div class="col-lg-3 col-md-6 col-sm-12"   
+    >
+    <div class="pricing-card"  >
+        <div class="pricing-header">Beginners</div>
+        <div class="pricing-content">
+            <p>No-Commitment Plan</p>
+            <p>15 Social media posts</p>
+            <p>5 Google ads run</p>
+            <p class="price text-primary">15k/Month</p>
+        </div>
+    </div>
+</div>
+
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="pricing-card">
+                    <div class="pricing-header">Intermediate</div>
+                    <div class="pricing-content">
+                        <p>No-Commitment Plan</p>
+                        <p>15 Social media posts</p>
+                        <p>5 Google ads run</p>
+                        <p class="price text-primary">25k/Month</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="pricing-card">
+                    <div class="pricing-header">Advanced</div>
+                    <div class="pricing-content">
+                        <p>No-Commitment Plan</p>
+                        <p>15 Social media posts</p>
+                        <p>5 Google ads run</p>
+                        <p class="price text-primary">35k/Month</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="pricing-card">
+                    <div class="pricing-header">Professional</div>
+                    <div class="pricing-content">
+                        <p>No-Commitment Plan</p>
+                        <p>15 Social media posts</p>
+                        <p>5 Google ads run</p>
+                        <p class="price text-primary">50k/Month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container faq-container">
+        <div class="Faq-Top-container">
+            <h2 class="faq-title " style="color: #452A78;">Most Frequent Questions</h2>
+            <p class="faq-subtitle">
+                There are many variations of passages of Lorem that Ipsum that is available
+                alteration randomised even slightly believable.
+            </p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question text-primary">
+                <span>How secure is an online transaction?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                You vexed shy mirth now noise. Talked him people valley add use her depend letter.
+                Allowance too applauded now way something recommend.
+                Mrs age men and trees jokes fancy. Gay pretended engrossed eagerness.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question text-primary">
+                <span>Why do you ask for personal information?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                You vexed shy mirth now noise. Talked him people valley add use her depend letter.
+                Allowance too applauded now way something recommend.
+                Mrs age men and trees jokes fancy. Gay pretended engrossed eagerness.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question text-primary">
+                <span>How long does 2Checkout store personal data?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                You vexed shy mirth now noise. Talked him people valley add use her depend letter.
+                Allowance too applauded now way something recommend.
+                Mrs age men and trees jokes fancy. Gay pretended engrossed eagerness.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question text-primary">
+                <span>How can I check the status of my order?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                You vexed shy mirth now noise. Talked him people valley add use her depend letter.
+                Allowance too applauded now way something recommend.
+                Mrs age men and trees jokes fancy. Gay pretended engrossed eagerness.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question text-primary">
+                <span>Why am I charged VAT?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                You vexed shy mirth now noise. Talked him people valley add use her depend letter.
+                Allowance too applauded now way something recommend.
+                Mrs age men and trees jokes fancy. Gay pretended engrossed eagerness.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question text-primary">
+                <span>How do I receive my invoice?</span>
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                You vexed shy mirth now noise. Talked him people valley add use her depend letter.
+                Allowance too applauded now way something recommend.
+                Mrs age men and trees jokes fancy. Gay pretended engrossed eagerness. </div>
+        </div>
+    </div>
+    <div class="Brand-Strategy mt-5">
+        <div class="Brand-Container d-flex flex-column justify-content-center align-items-center">
+            <h2 class="Brand-Head text-center  mb-2" style="color: #452A78; font-weight: bold; font-size: 33px;">Need a strategy for your Brand?</h2>
+            <p class="Brand-Para text-center text-secondary ">Tell us a bit about your brand and we’ll go from there
+            </p>
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                <button class="  bottom-button me-2"  >Click here</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- footer section -->
+
+    <footer class="footer" style="background-image: url('assets/footer.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="row text-center text-md-start gy-md-5 gx-md-4 gy-5">
+                <div class="col-md-3 col-lg-2">
+                    <div>
+                        <img src="assets/logo.png">
+                </div>
+                 
+                    </div>
+                <div class="col-md-5 col-lg-4 about-us-content">
+                    <h4 style="margin-bottom: 0px; padding-bottom: 0px;">About Us</h4>
+                    <p class="text-secondary" style="padding-top: 0px;">We bring ideas that are scribbled from brains on paper and steer them to
+                        reality.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                </div>
+                <div class="col-md-4 col-lg-2 quick-links">
+                    <h4>Quick Links</h4>
+                    <div class="list-unstyled text-secondary ">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4 contact-content">
+                    <h4>Contact Us</h4>
+                    <p class="text-secondary" ><i class="fas fa-phone"></i> <span class="footer-side">+91 8179074122</span></p>
+                    <p class="text-secondary"><i class="fas fa-envelope"></i><span class="footer-side"> sales@thepaperbrains.com </span></p>
+                    <p class="text-secondary"><i class="fas fa-map-marker-alt"></i> <span class="footer-side">LB Nagar, Plot 84, Central Bank Colony Hyderabad, Telangana
+                        500074</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p class="text-center text-white">Copyright © 2023 The Paper Brains | Powered by The Paper Brains</p>
+    </div>
+
+     <!-- footer section -->
+
+    </div>
+    <script>
+        // Function to format date as "Month Day, Year" (e.g., April 11, 2025)
+        function updateDate() {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date().toLocaleDateString(undefined, options);
+            document.getElementById('live-date').textContent = today;
+        }
+    
+        // Call the function when the page loads
+        updateDate();
+    </script>
+     <script>
+        // Function to format date as "Month Day, Year" (e.g., April 11, 2025)
+        function updateDate() {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date().toLocaleDateString(undefined, options);
+            document.getElementById('live-date1').textContent = today;
+        }
+    
+        // Call the function when the page loads
+        updateDate();
+    </script>
+    <script>
+        document.querySelectorAll(".faq-question").forEach(item => {
+            item.addEventListener("click", function () {
+                let parent = this.parentElement;
+                parent.classList.toggle("faq-open");
+
+                let icon = this.querySelector(".faq-toggle");
+
+                icon.textContent = parent.classList.contains("faq-open") ? "−" : "+";
+            });
+        });
+
+    </script>
+    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+</body>
+
+</html>
+    
+

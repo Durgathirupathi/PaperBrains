@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7rem;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+#successMessage {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.circle-icon {
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.circle-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer {
+    position: relative;
+    border-top: 3px solid;
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-bottom {
+    background-color: #442C76;
+    color: white;
+    padding: 15px 0;
+}
+
+</style>
+    <section class="contact-form">
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" oninput="handleChange(event)">
+                <span id="full_name_id" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" oninput="handleChange(event)">
+                <span id="phone_number_id" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" oninput="handleChange(event)">
+                <span id="email_id" class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Message:</label>
+                <textarea id="description" name="description" oninput="handleChange(event)"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="successMessage">
+            <div class="circle-icon">
+                <img src="tick-icon.png" alt="Success">
+            </div>
+            <p>Thank you! Your details have been submitted successfully.</p>
+        </div>
+        <button onclick="downloadExcel()">Download Excel</button>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <script>
+        function handleSubmit(event) {
+    event.preventDefault();
+
+    let isValid = true;
+
+    // Validate form fields
+    Object.keys(givenValues).forEach((key) => {
+        let id_s = document.getElementById(`${key}_id`);
+        if (givenValues[key]) {
+            if (id_s) id_s.textContent = "";
+
+            if (key === 'phone_number' && !/^\d{10}$/.test(givenValues[key])) {
+                id_s.textContent = "Please enter a valid 10-digit number";
+                isValid = false;
+            }
+        } else {
+            isValid = false;
+            if (id_s) id_s.textContent = `Please enter ${key.replace("_", " ")}`;
+        }
+    });
+
+    if (isValid) {
+        // Get existing data from LocalStorage or create an empty array
+        let storedData = JSON.parse(localStorage.getItem("formData")) || [];
+
+        // Add new form data to the stored data
+        let newEntry = {
+            full_name: givenValues.full_name,
+            phone_number: givenValues.phone_number,
+            email: givenValues.email,
+            description: givenValues.description,
+        };
+        storedData.push(newEntry);
+
+        // Save back to LocalStorage
+        localStorage.setItem("formData", JSON.stringify(storedData));
+
+        // Hide form and show success message
+        document.getElementById("contactForm").style.display = "none";
+        document.getElementById("successMessage").style.display = "flex";
+        document.querySelector(".divider").style.height = "100%";
+    } else {
+        console.log("❌ Form validation failed");
+    }
+}
+function downloadExcel() {
+    let storedData = JSON.parse(localStorage.getItem("formData")) || [];
+
+    if (storedData.length === 0) {
+        alert("No data available to download!");
+        return;
+    }
+
+    let csvContent = "data:text/csv;charset=utf-8,";
+    let headers = ["Full Name", "Phone Number", "Email", "Description"];
+    
+    csvContent += headers.join(",") + "\n";
+
+    storedData.forEach(entry => {
+        let row = [entry.full_name, entry.phone_number, entry.email, entry.description];
+        csvContent += row.join(",") + "\n";
+    });
+
+    // Create and trigger CSV download
+    let encodedUri = encodeURI(csvContent);
+    let link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "form_data.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+    </script>
+
+</body>
+</html>
+</body>
+</html>

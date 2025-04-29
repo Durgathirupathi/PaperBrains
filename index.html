@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Brains</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/About_Us.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-..." crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="home-page-main-section">
+
+
+
+        <section class="header-section">
+            <header>
+                <div class="header-sect-1 pt-3">
+                    <div class="header-section-1 d-flex m-auto align-items-center">
+                        <div class="logo-section">
+                            <a href="index.html">
+                            <img src="assets/logo.png"
+                                alt="paperBrains-logo">
+                                </a>
+                        </div>
+                        <div class="content-section flex-grow-1 text-center">
+                            <a href="index.html">
+                            <img src="assets/paperbrains.png" alt="">
+                            </a>
+                        </div>
+                        <div class="hamburger-section" onclick="hamburgerEvent()">
+                            <button class="cursor-pointer bg-transparent border-0">
+                                <img src="assets/Group 593.png" alt="Hamburger-logo" >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-sect-2 pt-3 pb-3">
+                    <div class="header-section-2 d-flex m-auto align-items-center">
+                        <div class="content-section-2">
+                            <span class="date" id="live-date"></span>
+                        </div>
+                        <div class="flex-grow-1 text-center menu-items-section">
+                            <ul class="d-flex justify-content-center w-100 gap-5 menu-list-sub-folder mb-0">
+                                <li class="menu-list d-inline-block"><a href="index.html" class="active">Home</a></li>
+                                <li class="menu-list d-inline-block"><a href="aboutUs.html">About Us</a></li>
+                                <li class="menu-list d-inline-block"><a href="Services.html">Services</a></li>
+                                <li class="menu-list d-inline-block"><a href="contacts.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="d-flex gap-4 mb-0">
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/Layer 2.png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/Group (2).png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/Layer 2 (1).png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/instagram (1) 2.png" alt="logo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-bar">
+                    <p class="side-bar-lg-para">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae exercitationem fugit quia placeat 
+                        omnis sequi itaque, nostrum rem ipsum. 
+                        Consectetur, blanditiis. Commodi inventore distinctio tenetur omnis cum quae minima consectetur!
+                    </p>
+
+
+                    <!-- <div class="header-mobile m-auto align-items-center">
+                        <div class="content-section-2">
+                            <span>November 24,2023</span>
+                        </div>
+                        <div class="flex-grow-1 text-center menu-items-section">
+                            <ul class="d-flex justify-content-center w-100 gap-5 menu-list-sub-folder mb-0">
+                                <li class="menu-list d-inline-block"><a href="index.html" class="active">Home</a></li>
+                                <li class="menu-list d-inline-block"><a href="./aboutUs.html">About Us</a></li>
+                                <li class="menu-list d-inline-block"><a href="./Services.html">Services</a></li>
+                                <li class="menu-list d-inline-block"><a href="./contacts.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-social-icons">
+                            <ul class="d-flex gap-4 mb-0">
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="../assets/Layer 2.png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="../assets/Group (2).png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="../assets/Layer 2 (1).png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="../assets/instagram (1) 2.png" alt="logo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                    <div class="header-mobile m-auto align-items-center">
+                        <!-- Date Section with Calendar Icon -->
+                        <div class="content-section-2 d-flex align-items-center">
+                            <i class="fa-solid fa-calendar-days me-2"></i>
+                            <span class="date" id="live-date1"></span>
+                        </div>
+                        <!-- Navigation Menu with Icons -->
+                        <div class="flex-grow-1 text-center menu-items-section">
+                            <ul class="d-flex justify-content-center w-100 gap-1 menu-list-sub-folder mb-0">
+                                <li class="menu-list d-inline-block">
+                                    <a href="index.html" class="active">
+                                        <i class="fa-solid fa-house me-1"></i> Home
+                                    </a>
+                                </li>
+                                <li class="menu-list d-inline-block">
+                                    <a href="./aboutUs.html">
+                                        <i class="fa-solid fa-user me-1"></i> About Us
+                                    </a>
+                                </li>
+                                <li class="menu-list d-inline-block">
+                                    <a href="./Services.html">
+                                        <i class="fa-solid fa-gears me-1"></i> Services
+                                    </a>
+                                </li>
+                                <li class="menu-list d-inline-block">
+                                    <a href="./contacts.html">
+                                        <i class="fa-solid fa-envelope me-1"></i> Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <!-- Social Media Icons -->
+                        <div class="header-social-icons">
+                            <ul class="d-flex gap-4 mb-0">
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/Layer 2.png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/Group (2).png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/Layer 2 (1).png" alt="logo"></a>
+                                </li>
+                                <li class="social-icons d-inline-block">
+                                    <a href="#"><img src="assets/instagram (1) 2.png" alt="logo"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+
+                    <button class="cursor-pointer bg-transparent border-0 cross-icon" onclick="hamburgerEvent()">
+                        <i class="fa-solid fa-sack-xmark"></i>
+                    </button>
+                </div>
+            </header>
+        </section>
+        <section class="hero-widget">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="hero-banner d-flex align-items-center col-12 h-100">
+                        <h1>
+                            Digital <br>
+
+                            <span>Marketing</span>
+
+                            <br>
+                            Agency
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="card-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-with-bg">
+                            <div class="card-content">
+                                <h2 class="card-title"><span class="single-text">F</span>uture Concept</h2>
+                            </div>
+                            <div class="card-image-container">
+                            <img src="assets/card image-1.png" alt="Brain Tech">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 ">
+                        <div class="card card-with-bg">
+                            <div class="card-content">
+                                <h2 class="card-title"><span class="single-text">T</span>he Big Idea</h2>
+                            </div>
+                            <div class="card-image-container">
+                            <img src="assets/card image.png" alt="Brain Tech">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card card-with-bg">
+                            <div class="card-content ">
+                                <h2 class="card-title"><span class="single-text">C</span>reative Solution</h2>
+                            </div>
+                            <div class="card-image-container">
+                            <img src="assets/card image-3.png" alt="Brain Tech">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="about-us container">
+            <div class="row gx-lg-5">
+                <div class="col-12 col-lg-12 heading-about">
+                    <h2 class="mb-4"><span>A</span>bout Us</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p>
+                        <span>
+                            We bring ideas that are scribbled from brains on paper
+                            and steer them to reality. Paper Brains is your doorway to a business
+                            possibility with a mushroom of services for all your digital and marketing necessities.
+                        </span>
+                        <br>
+                        <span>Our name, THE PAPER BRAINS, is conceived from the
+                            idea that creativity and ideas are the most essential components in the process
+                             of brand building. We believe that penning down ideas is a key step bet
+                            ween having a thought and making it a successful action. We consider that the most
+                            consequential ideas and stories emerge when they are written down on paper. Likewise,
+                            we take the ideas, craft them into robust stories and develop high-impact visuals that
+                            represent the brand’s story.</span>
+
+                    </p>
+
+
+                </div>
+                <div class="col-lg-6">
+                    <p><span>
+                            We work in alliance with our clients to create tailor
+                            -made designs that best represent their company and its values. We understand that
+                            each brand is unique and we strive to capture that distinctiveness and create a powerful
+                            brand identity.
+                        </span>
+                        <br>
+                        <span>
+                            We are passionate about creating stories th
+                            at bring brands to life and help them achieve their goals. Our miss
+                            ion is to help companies build powerful and successful brands that stand out in the
+                            market. With the help of our team of gifted storytellers, designers and
+                            strategists, we are confident that we can create the perfect story for your brand.
+                        </span>
+
+                    </p>
+
+                </div>
+                <div class="col-lg-12 three-btns">
+                    <div class="st-btn">
+                        <button class="btn btn-primary Create-btn">
+                            We Create Tomorrow's Solutions Today
+                        </button>
+                    </div>
+                    <div class="st-btn"><button class="btn btn-primary Create-btn">
+                            We Optimize Your Digital Success
+                        </button>
+                    </div>
+                    <div class="st-btn">
+                        <button class="btn btn-primary Create-btn">
+                            We Bring your Ideas to Life
+                        </button>
+                    </div>
+                </div>
+                <img src="assets/arrows.png" alt="">
+            </div>
+        </section>
+        <section class="vision-mission container">
+            <div class="row">
+                <div class="col-lg-6" style="background-image: url('assets/visionbg.png'); background-size: cover; background-position: center;">
+                    <div class="one-card">
+                        <h2 class="mb-4"><span>V</span>ision</h2>
+                        <p>To become a global marketing unicorn company and create an
+                            imprint on the world as a solution provider to the business
+                            in need of all marketing resources.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" style="background-image: url('assets/visionbg.png'); background-size: cover; background-position: center;">
+                    <div class="one-card">
+                        <h2><span>M</span>ission</h2>
+                        <p>To bring ideas that are ingrained in the minds
+                            of experts to reality and support businesses
+                            to accomplish their optimum capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-choose-us container" style="max-width: 1300px;">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 ps-lg-5 ps-md-4 ps-5 ">
+                    <div class="single-card-content">
+                        <h2 class=" mb-4">
+                            <span>W</span>hy choose Us
+                        </h2>
+                        <p>
+                            Well, a digital marketing agency is now essential for any business.
+                            Every day, new agencies emerge, but how many of them are focused on meeting the requirements
+                            of their customers?. We at The Paper Brains intend to
+                            bring change by serving as a solution provider rather than a service provider.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="single-card-img">
+                        <img src="assets/boat.png" alt="boat-img" class="w-100">
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </section>
+        <section class="service-section">
+            <div class="container">
+
+                <div class="row g-4">
+                    <div class="col-12 mt-0">
+                        <h2 class="text-left mb-4"><span>S</span>ervices</h2>
+                        <p>There are many variations of passages of Lorem that Ipsum that is that available
+                            alteration<br> randomised even slightly believable.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="service-card">
+                            <h4>Performance Marketing</h4>
+                            <p>Strategy is everything. Website design, branding, and social media marketing are all of
+                                nothing without the power of a powerful digital marketing strategy. We’ll design a plan
+                                tailored to your company that will keep your company’s name and brand in your customers’
+                                minds.</p>
+                            <img src="assets/perf-mark.png" alt="Performance Marketing" class="extra-width">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 ">
+                        <div class="service-card">
+                            <h4>Social Media Marketing</h4>
+                            <p>Never underestimate the power of social media. It’s estimated that the average user
+                                spends 50.1%
+                                of their time on their device, and 2 hours and 24 minutes on social media. Our
+                                powerful campaigns will get your brand front and center on major networks like Facebook,
+                                Twitter,
+                                Instagram, Pinterest, and LinkedIn.</p>
+                            <img src="assets/mobile.png" alt="Social Media" class="extra-width">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="service-card">
+                            <h4>Content Marketing</h4>
+                            <p>Who are you? What do you do?
+                                If your potential clients don’t know the moment they see your company, you’re likely to
+                                be left
+                                in the dust. Our expert design team will craft your Startup
+                                identity from the ground up, from colors and logos to images and personality.</p>
+                            <img src="assets/Mic.png" alt="SEO" class="extra-width">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="service-card">
+                            <h4>Website Development</h4>
+                            <p>Everyone and their dog has a self-made WordPress or a stock website with placeholder
+                                text.
+                                We offer a beautiful, high-end website
+                                that hooks your audience, multiplying your engagement and impressions TEN-FOLD.</p>
+                            <img src="assets/web-dev.png" alt="Content" class="extra-width">
+                        </div>
+                    </div>
+                    <div class="col-12 brandig-section">
+                        <div class="row">
+                            <div class="col-lg-6 brandig-content">
+                                <div>
+                                    <h4>
+                                        Branding
+                                    </h4>
+                                    <p>
+                                        Who are you? What do you do?
+                                        If your potential clients don’t know the moment they see your company, you’re
+                                        likely to be left in the dust. Our expert design team will craft
+                                        your Startup identity from the ground up, from colors and logos to images and
+                                        personality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="branding-img d-flex justify-content-center">
+                                    <img src="assets/branding.png" class="extra-width" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hassle-section" style="background-image: url('assets/serv.png'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="row g-4"> 
+                    <div class="col-md-12 mb-4 main-heading mt-0">
+                        <h2>
+                            <span>H</span>assles?
+                        </h2>
+                        <h5>Never Heard of Them</h5>
+
+                    </div>  
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hassle-service-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                      <img src="assets/circle-service.svg" alt="service-img">  
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Cost-Conscious Solutions</h5>
+                                </div>
+                            </div>
+                            <p class="hassle-service-content">
+                                We understand the importance of delivering effective solutions without straining 
+                                your budget. That's why we proudly present 
+                                our Cost-Conscious Solutions package – a perfect blend of affordability and effectiveness</p>
+                        </div>
+                    </div>
+        
+                    <!-- Other Cards -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hassle-service-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                    <img src="assets/circle-service.svg" alt="service-img"> 
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Unique Design</h5>
+                                </div>
+                            </div>
+                            <p class="hassle-service-content">
+                                At The Paper Brains, we believe in uniqueness and originality. 
+                                We don't settle for cookie-cutter designs. When it comes to your
+                                 branding, ads, and website, we ensure that they will truly stand out from the competition.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hassle-service-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                    <img src="assets/circle-service.svg" alt="service-img"> 
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Time is Our Ally</h5>
+                                </div>
+                            </div>
+                            <p class="hassle-service-content">
+                                At The Paper Brains, we harness time as our ally to guarantee on-time 
+                                delivery of digital marketing projects. Trust us to meet deadlines and achieve success together
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hassle-service-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                    <img src="assets/circle-service.svg" alt="service-img"> 
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Swift and Agile</h5>
+                                </div>
+                            </div>
+                            <p class="hassle-service-content">
+                                Discover the power of swift and agile solutions with our rapid response 
+                                expertise. Experience efficient problem-solving and quick 
+                                action for your needs, ensuring seamless progress and satisfaction
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hassle-service-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                    <img src="assets/circle-service.svg" alt="service-img"> 
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Tailored Service</h5>
+                                </div>
+                            </div>
+                            <p class="hassle-service-content">
+                                Experience true personalization with our dedicated staff. From 
+                                crafting winning game plans to presenting innovative ideas, 
+                                we are here to serve you every step of the way.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="hassle-service-card">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="me-3">
+                                    <img src="assets/circle-service.svg" alt="service-img"> 
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Transforming Solutions</h5>
+                                </div>
+                            </div>
+                            <p class="hassle-service-content">
+                                At The Paper Brains, we go beyond providing services. We are dedicated to transforming your digital marketing success
+                                by delivering innovative and tailored solutions that set you apart from the competition.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div class="Brand-Strategy mt-5">
+            <div class="Brand-Container d-flex flex-column justify-content-center align-items-center">
+                <h2 class="Brand-Head text-center  mb-2" style="color: #452A78; font-weight: bold; font-size: 33px;">Need a strategy for your Brand?</h2>
+                <p class="Brand-Para text-center text-secondary ">Tell us a bit about your brand and we’ll go from there
+                </p>
+                <div class="d-flex justify-content-center align-items-center mt-3">
+                    <button class="  bottom-button me-2"  >Click here</button>
+                </div>
+            </div>
+    
+        </div>
+        <!-- footer section -->
+
+        <footer class="footer" style="background-image: url('assets/footer.png'); background-size: cover; background-position: center;">
+            <div class="container">
+                <div class="row text-center text-md-start gy-md-5 gx-md-4 gy-5">
+                    <div class="col-md-3 col-lg-2">
+                        <div>
+                            <img src="assets/logo.png">
+                    </div>
+                     
+                        </div>
+                    <div class="col-md-5 col-lg-4 about-us-content">
+                        <h4 style="margin-bottom: 0px; padding-bottom: 0px;">About Us</h4>
+                        <p class="text-secondary" style="padding-top: 0px;">We bring ideas that are scribbled from brains on paper and steer them to
+                            reality.</p>
+                        <div class="social-icons mt-3">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2 quick-links">
+                        <h4>Quick Links</h4>
+                        <div class="list-unstyled text-secondary ">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4 contact-content">
+                        <h4>Contact Us</h4>
+                        <p class="text-secondary" ><i class="fas fa-phone"></i> <span class="footer-side">+91 8179074122</span></p>
+                        <p class="text-secondary"><i class="fas fa-envelope"></i><span class="footer-side"> sales@thepaperbrains.com </span></p>
+                        <p class="text-secondary"><i class="fas fa-map-marker-alt"></i> <span class="footer-side">LB Nagar, Plot 84, Central Bank Colony Hyderabad, Telangana
+                            500074</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="footer-bottom">
+            <p class="text-center text-white">Copyright © 2023 The Paper Brains | Powered by The Paper Brains</p>
+        </div>
+
+         <!-- footer section -->
+
+    </div>
+    <script>
+        // Function to format date as "Month Day, Year" (e.g., April 11, 2025)
+        function updateDate() {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date().toLocaleDateString(undefined, options);
+            document.getElementById('live-date').textContent = today;
+        }
+    
+        // Call the function when the page loads
+        updateDate();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
+        crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+</body>
+
+</html>
